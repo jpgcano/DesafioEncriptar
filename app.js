@@ -1,74 +1,54 @@
 // Diccionario para la encriptación
 let diccionarioEncriptador = {
-  e: "enter",
-  i: "imes",
-  a: "ai",
-  o: "ober",
-  u: "ufat",
+    e: "enter",
+    i: "imes",
+    a: "ai",
+    o: "ober",
+    u: "ufat",
 };
 
 // Diccionario para la desencriptación
 let diccionarioDesencriptador = {
-  enter: "e",
-  imes: "i",
-  ai: "a",
-  ober: "o",
-  ufat: "u",
+    enter: "e",
+    imes: "i",
+    ai: "a",
+    ober: "o",
+    ufat: "u",
 };
 
 // Función para encriptar
 function encriptardor() {
-  let mensaje = document.getElementById("texto").value.toLowerCase();
-  let mensajeEncriptado = "";
-  for (let i = 0; i < mensaje.length; i++) {
-    let char = mensaje[i];
-    if (diccionarioEncriptador[char]) {
-      mensajeEncriptado += diccionarioEncriptador[char];
-    } else {
-      mensajeEncriptado += char;
+    let mensaje = document.getElementById("texto").value.toLowerCase();
+    let mensajeEncriptado = "";
+    for (let i = 0; i < mensaje.length; i++) {
+        let char = mensaje[i];
+        if (diccionarioEncriptador[char]) {
+            mensajeEncriptado += diccionarioEncriptador[char];
+        } else {
+            mensajeEncriptado += char;
+        }
     }
-  }
-  console.log(mensajeEncriptado);
+    console.log(mensajeEncriptado);
 
-  return mensajeEnviar(mensajeEncriptado);
+    return mensajeEnviar(mensajeEncriptado);
 }
 
 // Función para desencriptar
 function desencriptar() {
-  let mensaje = document.getElementById("texto").value.toLowerCase();
-  let MensajeDesencriptar = mensaje;
-  for (let key in diccionarioDesencriptador) {
-    let value = diccionarioDesencriptador[key];
-    let re = new RegExp(key, "g");
-    MensajeDesencriptar = MensajeDesencriptar.replace(re, value);
-  }
-  return mensajeEnviar(MensajeDesencriptar);
+    let mensaje = document.getElementById("texto").value.toLowerCase();
+    let MensajeDesencriptar = mensaje;
+    for (let key in diccionarioDesencriptador) {
+        let value = diccionarioDesencriptador[key];
+        let re = new RegExp(key, "g");
+        MensajeDesencriptar = MensajeDesencriptar.replace(re, value);
+    }
+    return mensajeEnviar(MensajeDesencriptar);
 }
 
 function mensajeEnviar(Mensaje) {
-  document.getElementById("muñeco").style.display = "none";
-  document.getElementById("tituloNoencontrado").style.display = "none";
-  document.getElementById("copiar").removeAttribute("disabled");
-  let elentoHtml = document.querySelector("p");
-  elentoHtml.innerHTML = Mensaje;
-
-document.getElementById("copiar").addEventListener("click", function () {
-    // Crea un campo de texto "oculto"
-    var aux = document.createElement("input");
-
-    // Asigna el contenido del párrafo al valor del campo
-    aux.setAttribute("value", document.querySelector(".parrafo p").innerText);
-
-    // Añade el campo a la página
-    document.body.appendChild(aux);
-
-    // Selecciona el contenido del campo
-    aux.select();
-
-    // Copia el texto seleccionado
-    document.exewcCommand("copy");
-
-    // Elimina el campo de la página
-    document.body.removeChild(aux);
-});
+    document.getElementById("muñeco").style.display = "none";
+    document.getElementById("tituloNoencontrado").style.display = "none";
+    document.getElementById("copiar").removeAttribute("disabled");
+    let elentoHtml = document.querySelector("p");
+    elentoHtml.innerHTML = Mensaje;
 }
