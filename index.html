@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador-Desencriptador</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <img src="img/Logo-1.png" alt>
+        </header>
+        <main>
+            <section class="section_1">
+                <div class="contenedor_texto">
+                    <input class="texto" id="texto" type="text"
+                        value="Escriba aqui su texto">
+                </div>
+                <div class="contenedor_btn">
+                    <button class="btnEncritar"
+                        onclick=";encriptardor()">Encriptar</button>
+                    <button class="btnDesencriptar"
+                        onclick="desencriptar();">Desencritar</button>
+                </div>
+            </section>
+            <section class="section_2" id="contenedor-mensaje">
+                <div>
+                    <img class="muñeco" id="muñeco" src="/img/Muñeco.png"
+                        alt="texto no encontrado">
+                </div>
+                <div>
+                    <h3 class="tituloNoencontrado"
+                        id="tituloNoencontrado">Ningún mensaje fue
+                        encontrado</h3>
+                </div>
+                <div class="parrafo">
+                    <p></p>
+                    <button class="copiar" id="copiar" disabled>Copiar</button>
+                </div>
+                
+            </section>
+
+        </main>
+        <footer>
+            <p>&copysr;</p>
+        </footer>
+    </body>
+    <script src="app.js"> </script>
+</html>
