@@ -1,51 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Encriptador-Desencriptador</title>
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <img src="img/Logo-1.png" alt>
-        </header>
-        <main>
-            <!-- Falta funcionalidades de copiar, y arreglar errores en la interfaz-->
-            <section class="section_1">
-                <div class="contenedor_texto">
-                    <input class="texto" id="texto" type="text"
-                        value="Escriba aqui su texto">
-                </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador-Desencriptador</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="img/Logo-1.png" alt>
+    </header>
+    <main>
+        <!-- Falta funcionalidades de copiar, y arreglar errores en la interfaz-->
+        <section class="section_1">
+            <div class="contenedor_texto">
+                <textarea class="texto" id="texto" type="text" placeholder="Escriba aqui su texto"></textarea>
                 <div class="contenedor_btn">
-                    <button class="btnEncritar"
-                        onclick=";encriptardor()">Encriptar</button>
-                    <button class="btnDesencriptar"
-                        onclick="desencriptar();">Desencritar</button>
+                    <button class="btnEncritar" onclick="encriptardor();">Encriptar</button>
+                    <button class="btnDesencriptar" onclick="desencriptar();">Desencritar</button>
                 </div>
-            </section>
-            <section class="section_2" id="contenedor-mensaje">
+            </div>
+        </section>
+        <section class="section_2" id="contenedor-mensaje">
+            <div class="imagen" id="imagen">
+                <img class="muñeco" id="muñeco" src="/img/Muñeco.png" alt="texto no encontrado">
                 <div>
-                    <img class="muñeco" id="muñeco" src="/img/Muñeco.png"
-                        alt="texto no encontrado">
-                </div>
-                <div>
-                    <h3 class="tituloNoencontrado"
-                        id="tituloNoencontrado">Ningún mensaje fue
+                    <h3 class="tituloNoencontrado" id="tituloNoencontrado">Ningún mensaje fue
                         encontrado</h3>
                 </div>
-                <div class="parrafo">
-                    <p></p>
-                    <button class="copiar" id="copiar" disabled>Copiar</button>
-                </div>
-                
-            </section>
+            </div>
 
-        </main>
-        <footer>
-            <p>&copysr;</p>
-        </footer>
-    </body>
-    <script src="app.js"> </script>
+            <div class="contenedor-parrafo" id="contenedor-parrafo" hidden>
+                <p class="parrafo"></p>
+                <div class="contenedor_btn">
+                    <button onclick="copy();" class="copiar" id="copiar">Copiar</button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer></footer>
+</body>
+<script src="app.js" defer> </script>
+
 </html>

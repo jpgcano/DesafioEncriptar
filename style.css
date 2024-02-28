@@ -1,75 +1,111 @@
-
-body{ 
+body {
     position: absolute;
-    width: 100% ;
+    width: 100%;
     background: #E5E5E5;
 }
-header{
+
+header {
     margin-left: 95px;
     padding: 5px;
 }
-main{
+
+main {
     width: 100%;
     height: 600px;
     display: flex;
     justify-content: space-between;
 }
-.section_1{
+
+.section_1 {
     padding: 20px;
-    width: 40%;
+    width: 70%;
     margin: 10px;
 }
-.contenedor_texto{
-    margin: 10px;
-    padding: 20px;
-    width: 780px;
-    height: 440px;
+
+.contenedor_texto {
+    height: 100%;
+    width: 100%;
 }
-.texto{
+
+.texto {
+    height: 60%;
+    width: 90%;
+    margin: 35px;
     border: none;
-    outline: NONE;
+    outline: none; /* Cambiado a minúsculas */
     background: transparent;
-    border-radius: 15px;
-    padding: 50px;
     font-weight: bold;
     font-size: 32px;
     color: darkblue;
+}
+
+.contenedor_btn {
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 80px; /* Cambiado a una unidad absoluta */
+    margin-top: 2rem;
+}
+
+.section_1 button {
+    display: inline;
+    margin: 0 2px 0 20px;
+}
+
+.section_2 {
+    background-color: white;
+    margin: 1rem;
+    border-radius: 32px;
+    width: 40%;
+    height: 90%;
+}
+
+.section_2 .contenedor_btn {
+    height: 80px; /* Cambiado a una unidad absoluta */
 
 }
-.contenedor_btn{
-    text-align: center;
-    
+
+.section_2 button {
+    margin: 1rem
 }
-.section_2{
-    margin: 10px;
-    border-radius: 32px;
-    background: white;
-    width:400px;
-    height: 600px;
-    padding: 50px;
+
+.imagen {
+    height: 80%;
 }
-.muñeco{
-    width: 336px;
-    height:304px ;
-}
-.contenedor_btn{
+
+.muñeco {
     width: 100%;
+    height: 100%;
 }
-button{
-    width: 150px;
-    margin: 10px;
-    padding: 20px;
-    display: inline;
-    border-radius: 40px;
-    
+
+button {
+    /* justify-content: center; Eliminado, no tiene efecto */
+    text-align: center; /* Añadido para centrar el contenido */
+    border-radius: 10rem;
+    padding: 1rem;
+    width: 15rem;
 }
-.tituloNoencontrado{
+
+.tituloNoencontrado {
     font-size: 30px;
     color: darkblue;
 }
-.parrafo{
-    padding: 40px;
-    margin-top: 20%;
-    font-size: 10px ;
+
+.contenedor-parrafo {
+    width: 100%;
+    height: auto; /* Cambiado para que se adapte al contenido */
+    flex: 1; /* Añadido para que ocupe el espacio disponible */
+}
+
+.parrafo {
+    width: 90%;
+    margin: 2rem;
+    height: auto; /* Cambiado para que se adapte al contenido */
+    font-size: x-large;
     text-align: center;
+}
+
+button:hover {
+    background: darkblue;
+    color: white;
 }

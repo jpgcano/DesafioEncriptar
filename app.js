@@ -20,7 +20,7 @@ let diccionarioDesencriptador = {
 function encriptardor() {
     let mensaje = document.getElementById("texto").value.toLowerCase();
     let mensajeEncriptado = "";
-    for (let i = 0; i < mensaje.length; i++) {
+    for (let i in mensaje) {
         let char = mensaje[i];
         if (diccionarioEncriptador[char]) {
             mensajeEncriptado += diccionarioEncriptador[char];
@@ -46,9 +46,14 @@ function desencriptar() {
 }
 
 function mensajeEnviar(Mensaje) {
-    document.getElementById("muñeco").style.display = "none";
-    document.getElementById("tituloNoencontrado").style.display = "none";
+    document.getElementById("imagen").style.display="none"
     document.getElementById("copiar").removeAttribute("disabled");
+    document.getElementById("contenedor-parrafo").style.display="block";
     let elentoHtml = document.querySelector("p");
     elentoHtml.innerHTML = Mensaje;
+}
+
+
+function copy(){
+    
 }
